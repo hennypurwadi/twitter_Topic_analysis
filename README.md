@@ -1,31 +1,34 @@
-To install .yaml environment dependencies using conda powershell cmd: 
+##To install .yaml environment dependencies using conda powershell cmd: 
 
 (base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda env create -f nlp_tweet_env.yaml
 
-To activate .yaml environment : 
+##To activate .yaml environment : 
 
 (base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda activate nlp_tweet_env
 
-To deactivate .yaml environment : 
+##To deactivate .yaml environment : 
 
 (base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda deactivate
 
-To Run jupyter notebook from cmd:
+##To Run jupyter notebook from cmd:
 
 (nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>jupyter notebook
 
-If it doesn't work:
+##If it doesn't work:
 
 (nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>python -m notebook
 
-To escape :
+##To escape :
 Ctrl + C
 
-Back to cmd:
-CTRL + Z
+##Back to cmd:
+ctrl + Z
+
 ------------------
+
 To install snscrape must be from cmd, can't install from jupyter notebook:
 pip3 install snscrape
+
 ------------------
 
 To analyze data from Twitter, need to prepare several steps:
