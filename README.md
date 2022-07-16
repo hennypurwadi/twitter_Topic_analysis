@@ -38,6 +38,7 @@ lemmatization, stemming. Using nltk for stop words, tokenization.
           Vectorize cleaned tweets with Tf-IDF.
 
 Tf-IDF outperforms CountVectorizer.
+
 Justification:       
 TF-IDF is better than Count Vectorizers because it not only focuses on the frequency of words present in the corpus but also provides the importance of the words. We can then remove the words that are less important for analysis, hence making the model building less complex by reducing the input dimensions. (Sheel Saket, 2020).
 
