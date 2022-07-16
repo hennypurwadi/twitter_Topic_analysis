@@ -18,6 +18,14 @@ If it doesn't work:
 
 (nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>python -m notebook
 
+To escape :
+Ctrl + C
+
+Back to cmd:
+CTRL + Z
+------------------
+To install snscrape must be from cmd, can't install from jupyter notebook:
+pip3 install snscrape
 ------------------
 
 To analyze data from Twitter, need to prepare several steps:
