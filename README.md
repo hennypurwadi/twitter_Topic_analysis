@@ -2,7 +2,7 @@
 
 A. Collect Twitter's data:
 
-   There are 2 ways to collect data from Twitter: 
+    1.There are 2 ways to collect data from Twitter: 
    
     1.1. 
       Without Twitter Developer Account API: with snscrape
