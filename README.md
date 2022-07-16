@@ -39,7 +39,8 @@ B. Perform data analysis:
            Vectorize cleaned tweets with CountVectorizer.
            3.1.3.
            Vectorize cleaned tweets with Tf-IDF.
-           Tf-IDF is better than Count Vectorizer,because it provides the importance of the words, and not only focus on the frequency of words in the corpus, and ignore less important words for analysis.
+           Tf-IDF is better than Count Vectorizer,because it provides the importance of the words, 
+           and not only focus on the frequency of words in the corpus, and ignore less important words for analysis.
         
        3.2.Topic extraction using LDA/LatentDirichletAllocation to extract the five most commonly discussed topics.
            LDA doesn't need Tf-IDF to infer topics, but using Tf-IDF can improve result.
