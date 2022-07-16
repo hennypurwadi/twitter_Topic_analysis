@@ -1,3 +1,20 @@
+To install .yaml environment dependencies using conda powershell cmd: 
+(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda env create -f nlp_tweet_env.yaml
+
+To activate .yaml environment : 
+(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda activate nlp_tweet_env
+
+To deactivate .yaml environment : 
+(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda deactivate
+
+To Run jupyter notebook from cmd:
+(nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>jupyter notebook
+
+If it doesn't work:
+(nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>python -m notebook
+
+------------------
+
 To analyze data from Twitter, need to prepare several steps:
 
 1. Collect Twitter's data:
