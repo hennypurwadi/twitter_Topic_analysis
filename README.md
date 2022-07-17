@@ -23,12 +23,12 @@ To escape :
 
 Back to cmd:
 >ctrl + Z
-
 ------------------
+Additional:
 
-To install snscrape must be from cmd, can't install from jupyter notebook:
-pip3 install snscrape
-
+!pip3 install snscrape
+!pip install tweepy
+!pip install wordcloud
 ------------------
 
 To analyze data from Twitter, need to prepare several steps:
