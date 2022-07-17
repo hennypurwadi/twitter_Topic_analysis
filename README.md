@@ -1,28 +1,28 @@
-##To install .yaml environment dependencies using conda powershell cmd: 
+To install .yaml environment dependencies using conda powershell cmd: 
 
-(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda env create -f nlp_tweet_env.yaml
+>(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda env create -f nlp_tweet_env.yaml
 
-##To activate .yaml environment : 
+To activate .yaml environment : 
 
-(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda activate nlp_tweet_env
+>(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda activate nlp_tweet_env
 
-##To deactivate .yaml environment : 
+To deactivate .yaml environment : 
 
-(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda deactivate
+>(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda deactivate
 
-##To Run jupyter notebook from cmd:
+To Run jupyter notebook from cmd:
 
-(nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>jupyter notebook
+>(nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>jupyter notebook
 
-##If it doesn't work:
+If it doesn't work:
 
-(nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>python -m notebook
+>(nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>python -m notebook
 
-##To escape :
-Ctrl + C
+To escape :
+>Ctrl + C
 
-##Back to cmd:
-ctrl + Z
+Back to cmd:
+>ctrl + Z
 
 ------------------
 
@@ -72,14 +72,20 @@ lemmatization, stemming. Using nltk for stop words, tokenization.
 
 Tf-IDF outperforms CountVectorizer.
 
+Tf-IDF outperforms CountVectorizer.
 Justification:       
 TF-IDF is better than Count Vectorizers because it not only focuses on the frequency of words present in the corpus but also provides the importance of the words. We can then remove the words that are less important for analysis, hence making the model building less complex by reducing the input dimensions. (Sheel Saket, 2020).
 
-2.3.3. Topics extraction using LDA/ Latent Dirichlet Allocation.
-       Topics extraction using LDA/ Latent Dirichlet Allocation.NMF/Non-Negative Matrix
-	
-LDA outperforms NMF in terms of their topic coherence.
-LDA doesn't need Tf-IDF to infer topics. But using Tf-IDF can improve result.
+2.3.3. Topics extraction using LDA/ Latent Dirichlet Allocation from CountVectorizer.
+          Topics extraction using LDA/ Latent Dirichlet Allocation from Tf-IDF.
+          Topics extraction using NMF/Non-Negative Matrix from CountVectorizer.
+          Topics extraction using NMF/Non-Negative Matrix from Tf-IDF.
+          
+Compared the result.
+LDA and NMF doesn't need Tf-IDF to infer topics. But using Tf-IDF can improve result.
+LDA is good in identifying coherent topics. 
+NMF usually good for incoherent topics.	
 
 Justification:       
 Applied topic modeling over the tweets to obtain meaningful data from Twitter, comparing and analyzing topics detected by two popular topic modeling algorithms; Non-negative Matrix Factorization (NMF) and Latent Dirichlet Allocation (LDA). The observed results show that LDA outperforms NMF in terms of their topic coherence. (Nassera Habat, 2021).
+
