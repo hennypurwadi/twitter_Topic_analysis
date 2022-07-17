@@ -75,7 +75,6 @@ lemmatization, stemming. Using nltk for stop words, tokenization.
 
 Tf-IDF outperforms CountVectorizer.
 
-Tf-IDF outperforms CountVectorizer.
 Justification:       
 TF-IDF is better than Count Vectorizers because it not only focuses on the frequency of words present in the corpus but also provides the importance of the words. We can then remove the words that are less important for analysis, hence making the model building less complex by reducing the input dimensions. (Sheel Saket, 2020).
 
@@ -85,9 +84,11 @@ TF-IDF is better than Count Vectorizers because it not only focuses on the frequ
           Topics extraction using NMF/Non-Negative Matrix from Tf-IDF.
           
 Compared the result.
-LDA and NMF doesn't need Tf-IDF to infer topics. But using Tf-IDF can improve result.
+
 LDA is good in identifying coherent topics. 
 NMF usually good for incoherent topics.	
+
+LDA and NMF doesn't need Tf-IDF to infer topics. But using Tf-IDF can improve result.
 
 Justification:       
 Applied topic modeling over the tweets to obtain meaningful data from Twitter, comparing and analyzing topics detected by two popular topic modeling algorithms; Non-negative Matrix Factorization (NMF) and Latent Dirichlet Allocation (LDA). The observed results show that LDA outperforms NMF in terms of their topic coherence. (Nassera Habat, 2021).
