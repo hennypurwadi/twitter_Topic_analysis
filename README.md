@@ -1,10 +1,14 @@
 To install .yaml environment dependencies using conda powershell cmd: 
 
->(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda env create -f nlp_tweet_env.yaml
+>(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda env create -f DLBDSEDA02.yaml
 
 To activate .yaml environment : 
 
->(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda activate nlp_tweet_env
+>(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda activate DLBDSEDA02
+
+To add library and update .yaml environment : 
+
+>(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda env update -f DLBDSEDA02.yaml
 
 To deactivate .yaml environment : 
 
