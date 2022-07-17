@@ -54,7 +54,7 @@ To analyze data from Twitter, need to prepare several steps:
 3. Create YAML file as virtual environment.
     It contained Python libraries as virtual dependencies, such as NumPy, Scikit-learn, Pandas, NLTK.
     
-4. Retrieving twitter's data for username, hashtags, and tweets in location within radius 30 kilometers around London. (geocode 51.55201,-0.05824) with tweepy. https://tinyurl.com/nh26dkkn
+4. Retrieving twitter's data for username, hashtags, tweets in location within radius 100 kilometers around London. (geocode 51.55201,-0.05824) with tweepy. https://tinyurl.com/nh26dkkn
     
 2. Perform data analysis:
 
