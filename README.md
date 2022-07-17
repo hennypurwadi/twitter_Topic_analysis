@@ -27,8 +27,11 @@ Back to cmd:
 Additional:
 
 !pip3 install snscrape
+
 !pip install tweepy
+
 !pip install wordcloud
+
 ------------------
 
 To analyze data from Twitter, need to prepare several steps:
