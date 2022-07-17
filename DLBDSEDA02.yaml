@@ -1,0 +1,16 @@
+name: DLBDSEDA02
+channels:
+  - defaults
+dependencies:
+  - pip=21.0.1
+  - spacy
+  - numpy
+  - matplotlib=3.3.4
+  - pandas=1.3.3
+  - nltk=3.6.1
+  - scikit-learn
+  - regex
+  - oauthlib
+  - pillow
+
+prefix: C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02
