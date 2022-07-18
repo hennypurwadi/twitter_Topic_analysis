@@ -1,9 +1,7 @@
 To perform 3 separated tweets analysis from Twitter in particular area location:
 
-- Entity analysis to find 5 most active users. Doesn't need cleaning proses to make lowercase, since Capital letter is unique part of the name.
-
-- Entity analysis to find 5 most frequently used hashtags. Lite cleaning with regex to make lowercase, removing URLs, special characters, etc.
-
+- Entity analysis to find 5 most active users. 
+- Entity analysis to find 5 most frequently used hashtags. 
 - Entity analysis to extract five most prevalent topics in the tweets.
 
 ---------------------
