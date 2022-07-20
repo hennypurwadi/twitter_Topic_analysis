@@ -102,13 +102,13 @@ TF-IDF is better than Count Vectorizers because it not only focuses on the frequ
           
 Compared the result.
 
+            NMF gave the best result in topic categorizing from tweets.
+
+LDA and NMF doesn't need Tf-IDF to infer topics. But using Tf-IDF can improve result.
+
 LDA is good in identifying coherent topics. 
 
 NMF usually good for incoherent topics like tweets.	
-
-            Therefore NMF gave the best result in topic categorizing from tweets.
-
-LDA and NMF doesn't need Tf-IDF to infer topics. But using Tf-IDF can improve result.
 
 Justification:       
 Applied topic modeling over the tweets to obtain meaningful data from Twitter, comparing and analyzing topics detected by two popular topic modeling algorithms; Non-negative Matrix Factorization (NMF) and Latent Dirichlet Allocation (LDA). The observed results show that LDA outperforms NMF in terms of their topic coherence. (Nassera Habat, 2021).
