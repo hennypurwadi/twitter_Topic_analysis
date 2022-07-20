@@ -103,7 +103,10 @@ TF-IDF is better than Count Vectorizers because it not only focuses on the frequ
 Compared the result.
 
 LDA is good in identifying coherent topics. 
-NMF usually good for incoherent topics.	
+
+NMF usually good for incoherent topics like tweets.	
+
+        Therefore NMF gave the best result in this topic categorizing from tweets.
 
 LDA and NMF doesn't need Tf-IDF to infer topics. But using Tf-IDF can improve result.
 
