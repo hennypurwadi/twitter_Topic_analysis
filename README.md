@@ -1,4 +1,4 @@
-To perform 3 separated tweets analysis from Twitter in particular area location (radius 100 km around London)
+To perform 3 separated tweets analysis from Twitter in particular area location (radius 30 km around London)
 
 - Entity analysis to find 5 most active users. 
 - Entity analysis to find 5 most frequently used hashtags. 
