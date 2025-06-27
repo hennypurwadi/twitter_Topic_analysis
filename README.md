@@ -2,7 +2,7 @@
 
 This project performs analysis on tweets collected from within a 30 km radius around 10 Downing Street, London. The purpose is to identify key entities and extract prevalent topics without requiring access to the Twitter API.
 
-### Objectives
+### 📌 Objectives
 
 - **Entity Analysis**:
   - Identify the 5 most active Twitter users.
@@ -12,7 +12,7 @@ This project performs analysis on tweets collected from within a 30 km radius ar
 
 ---
 
-## Installation and Environment Setup
+## 🔧 Installation and Environment Setup
 
 This project uses a Conda virtual environment.
 
@@ -38,7 +38,7 @@ conda deactivate
 
 ---
 
-## Run the Notebook
+## 🧪 Run the Notebook
 
 Start the Jupyter Notebook:
 
@@ -57,7 +57,7 @@ python -m notebook
 
 ---
 
-## Library Requirements 
+## 📥 Library Requirements (if needed manually)
 ```bash
 pip install snscrape
 pip install tweepy
@@ -66,7 +66,7 @@ pip install wordcloud
 
 ---
 
-## Workflow Summary
+## 📊 Workflow Summary
 
 ### 1. Collect Twitter Data
 
@@ -110,7 +110,7 @@ pip install wordcloud
 
 ---
 
-## Conclusion
+## ✅ Conclusion
 
 - **Tf-IDF > CountVectorizer** for weighting meaningful words.
 - **NMF > LDA** for noisy and short texts like tweets.
@@ -118,16 +118,39 @@ pip install wordcloud
 
 ---
 
-## Repository
+## 📂 Repository
 
 GitHub Project: [https://github.com/hennypurwadi/twitter_analysis](https://github.com/hennypurwadi/twitter_analysis)
 
 ---
 
-## References
+## 📚 References
 
 - Marco Bonzanini. *Mastering Social Media Mining with Python* (2016).
 - Nassera Habat (2021). *Topic Modeling on Moroccan Tweets*.
 - Sheel Saket (2020). *CountVectorizer vs Tf-IDF*.
 - [Scikit-learn CountVectorizer Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)
 - [Love Island Final Episode News](https://metro.co.uk/2022/07/27/when-does-love-island-2022-end-final-episode-date-revealed-2-17079275/)
+
+
+---
+
+## 🔍 Findings
+
+- A total of **40,000 tweets** were collected within a 30km radius around 10 Downing Street, London (July 29–30, 2022).
+- Among them, **10,289 tweets** contained hashtags.
+- **Most Active User**: Posted **164 tweets** over 2 days.
+- **Most Frequent Hashtags**: Extracted after regex cleaning and normalization.
+- **Topic Modeling Results**:
+  - LDA produced incoherent results for tweets, with common words like *"gemma"* and *"love"* appearing across topics.
+  - NMF, particularly with **Tf-IDF**, revealed meaningful topics:
+    - Topics about **Love Island** (reality TV show)
+    - **Music**
+    - **Rail and transportation**
+- Contrary to the initial hypothesis that the new UK Prime Minister would be the trending topic, **Love Island** dominated the discourse in that area during the timeframe.
+- **Issue Encountered**: Dataset access errors during tweet scraping.
+  - **Solution**: Restarted Jupyter Kernel and closed the open `.csv` file.
+- **Conclusion**:
+  - **NMF + Tf-IDF** combination is effective for short, noisy texts like tweets.
+  - **LDA** is more suited for longer, coherent documents.
+
