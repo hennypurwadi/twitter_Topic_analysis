@@ -2,7 +2,7 @@
 
 This project performs analysis on tweets collected from within a 30 km radius around 10 Downing Street, London. The purpose is to identify key entities and extract prevalent topics without requiring access to the Twitter API.
 
-### 📌 Objectives
+### Objectives
 
 - **Entity Analysis**:
   - Identify the 5 most active Twitter users.
@@ -12,7 +12,7 @@ This project performs analysis on tweets collected from within a 30 km radius ar
 
 ---
 
-## 🔧 Installation and Environment Setup
+## Installation and Environment Setup
 
 This project uses a Conda virtual environment.
 
@@ -38,7 +38,7 @@ conda deactivate
 
 ---
 
-## 🧪 Run the Notebook
+## Run the Notebook
 
 Start the Jupyter Notebook:
 
@@ -57,7 +57,7 @@ python -m notebook
 
 ---
 
-## 📥 Library Requirements (if needed manually)
+## Library Requirements 
 ```bash
 pip install snscrape
 pip install tweepy
@@ -66,7 +66,7 @@ pip install wordcloud
 
 ---
 
-## 📊 Workflow Summary
+## Workflow Summary
 
 ### 1. Collect Twitter Data
 
@@ -110,7 +110,7 @@ pip install wordcloud
 
 ---
 
-## ✅ Conclusion
+## Conclusion
 
 - **Tf-IDF > CountVectorizer** for weighting meaningful words.
 - **NMF > LDA** for noisy and short texts like tweets.
@@ -118,13 +118,13 @@ pip install wordcloud
 
 ---
 
-## 📂 Repository
+## Repository
 
 GitHub Project: [https://github.com/hennypurwadi/twitter_analysis](https://github.com/hennypurwadi/twitter_analysis)
 
 ---
 
-## 📚 References
+## References
 
 - Marco Bonzanini. *Mastering Social Media Mining with Python* (2016).
 - Nassera Habat (2021). *Topic Modeling on Moroccan Tweets*.
