@@ -1,97 +1,133 @@
-To perform 3 separated tweets analysis from Twitter in particular area location (radius 30 km around London)
+# Twitter Entity and Topic Analysis around London (30km Radius)
 
-- Entity analysis to find 5 most active users. 
-- Entity analysis to find 5 most frequently used hashtags. 
-- Entity analysis to extract five most prevalent topics in the tweets.
+This project performs analysis on tweets collected from within a 30 km radius around 10 Downing Street, London. The purpose is to identify key entities and extract prevalent topics without requiring access to the Twitter API.
 
----------------------
+### 📌 Objectives
 
-To install .yaml environment dependencies using conda powershell cmd: 
+- **Entity Analysis**:
+  - Identify the 5 most active Twitter users.
+  - Find the 5 most frequently used hashtags.
+- **Topic Modeling**:
+  - Extract the 5 most prevalent topics from tweet content using different vectorization and modeling techniques (LDA, NMF).
 
->(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda env create -f DLBDSEDA02.yaml
+---
 
-To activate .yaml environment : 
+## 🔧 Installation and Environment Setup
 
->(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda activate DLBDSEDA02
+This project uses a Conda virtual environment.
 
-To add library and update .yaml environment : 
+### 1. Create Environment
+```bash
+conda env create -f DLBDSEDA02.yaml
+```
 
->(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda env update -f DLBDSEDA02.yaml
+### 2. Activate Environment
+```bash
+conda activate DLBDSEDA02
+```
 
-To deactivate .yaml environment : 
+### 3. Add Library & Update Environment
+```bash
+conda env update -f DLBDSEDA02.yaml
+```
 
->(base) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02> conda deactivate
+### 4. Deactivate Environment
+```bash
+conda deactivate
+```
 
-To Run jupyter notebook from cmd:
+---
 
->(nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>jupyter notebook
+## 🧪 Run the Notebook
+
+Start the Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
 
 If it doesn't work:
 
->(nlp_tweet_env) PS C:\Users\HENNY\Documents\PYTHON\DLBDSEDA02>python -m notebook
+```bash
+python -m notebook
+```
 
-To escape :
->Ctrl + C
+> To stop the process: `Ctrl + C`  
+> To return to cmd: `Ctrl + Z`
 
-Back to cmd:
->ctrl + Z
-------------------
-Additional:
+---
 
-!pip3 install snscrape
+## 📥 Library Requirements (if needed manually)
+```bash
+pip install snscrape
+pip install tweepy
+pip install wordcloud
+```
 
-!pip install tweepy
+---
 
-!pip install wordcloud
+## 📊 Workflow Summary
 
-------------------
+### 1. Collect Twitter Data
 
-To analyze data from Twitter, need to prepare several steps:
+- Tweets were collected using the `snscrape` library.
+- Total tweets scraped: **40,000**
+- Timeframe: **29–30 July 2022**
+- No Twitter Developer API required.
+- Dataset includes usernames, hashtags, and tweet text.
 
-1. Collect Twitter's data:
-Without Twitter Developer Account API: with snscrape.
-Installation from command prompt: #pip3 install snscrape.
+### 2. Entity Analysis
 
-2. Set up an open GitHub repository in https://github.com/hennypurwadi/twitter_analysis 
- to store the code created later in development phase. 
- 
-3. Create YAML file as virtual environment.
- It contained Python libraries as virtual dependencies, such as NumPy, Scikit-learn, Pandas, NLTK.
- 
-4. Retrieving twitter's data for username, hashtags, Retrieving twitter's data for username, hashtags, 
-tweets in location within 30 km radius from DowningStreet10 London.
+- **Top Users**: Based on tweet count (most active = 164 tweets).
+- **Top Hashtags**: After basic regex cleaning (lowercasing, removing special characters).
+- **No additional lowercase cleaning for usernames** (capitalization is part of identity).
 
-2. Perform data analysis:
+### 3. Topic Modeling
 
-2.1. Entity analysis to find 5 most active users.
-Doesn't need cleaning proses to make lowercase, since Capital letter is unique part of the name. 
+#### Preprocessing:
 
-2.2. Entity analysis to find 5 most frequently used hashtags.
-Lite cleaning with regex to make lowercase special characters, etc. 
+- Cleaned using regex, URL and special character removal.
+- Stopwords removal, tokenization, lemmatization, stemming with `nltk`.
 
-2.3. Entity analysis to extract five most prevalent topics in the tweets.
+#### Vectorization:
 
-2.3.1. Tweets pre-processing data cleaning: 
-Using regex to make lowercase, removing URLs, special characters, web scraping, 
-lemmatization, stemming. Using nltk for stop words, tokenization. 
+- `CountVectorizer` with `ngram_range=(1,3)` for unigrams, bigrams, trigrams.
+- `TfidfVectorizer` with the same `ngram_range`.
 
-2
-2.3.2. Vectorize cleaned tweets with CountVectorizer.
- Vectorize cleaned tweets with Tf-IDF.
-Tf-IDF outperforms CountVectorizer.
+#### Topic Extraction:
 
-TF-IDF is better than Count Vectorizers because it not only focuses on the frequency of words 
-present in the corpus but also provides the importance of the words. We can then remove the words 
-that are less important for analysis, hence making the model building less complex by reducing the 
-input dimensions. (Sheel Saket, 2020).
+- Using **LDA** (Latent Dirichlet Allocation) and **NMF** (Non-negative Matrix Factorization) on both vectorizers.
+- NMF outperformed LDA for incoherent text like tweets.
+- Identified topics included:
+  - **Love Island** (TV show)
+  - **Music**
+  - **Trains and Rail**
 
-2.3.3. Topics extraction using LDA/ Latent Dirichlet Allocation from CountVectorizer.
- Topics extraction using LDA/ Latent Dirichlet Allocation from Tf-IDF.
- Topics extraction using NMF/Non-Negative Matrix from CountVectorizer.
- Topics extraction using NMF/Non-Negative Matrix from Tf-IDF.
- 
-Compared the result.
+#### Insights:
 
-LDA and NMF doesn't need Tf-IDF to infer topics. But using Tf-IDF can improve result.
-LDA is good in identifying coherent topics.
-NMF usually good for incoherent topics.
+- LDA is better for coherent text, but less effective on noisy Twitter data.
+- NMF with Tf-IDF provided more distinct and relevant topics.
+
+---
+
+## ✅ Conclusion
+
+- **Tf-IDF > CountVectorizer** for weighting meaningful words.
+- **NMF > LDA** for noisy and short texts like tweets.
+- Contrary to expectation, tweets about **Love Island** were more prevalent than those about UK politics during the period analyzed.
+
+---
+
+## 📂 Repository
+
+GitHub Project: [https://github.com/hennypurwadi/twitter_analysis](https://github.com/hennypurwadi/twitter_analysis)
+
+---
+
+## 📚 References
+
+- Marco Bonzanini. *Mastering Social Media Mining with Python* (2016).
+- Nassera Habat (2021). *Topic Modeling on Moroccan Tweets*.
+- Sheel Saket (2020). *CountVectorizer vs Tf-IDF*.
+- [Scikit-learn CountVectorizer Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)
+- [Love Island Final Episode News](https://metro.co.uk/2022/07/27/when-does-love-island-2022-end-final-episode-date-revealed-2-17079275/)
